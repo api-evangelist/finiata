@@ -1,7 +1,32 @@
 aid: finiata
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/finiata.png
 name: Finiata
-description: Finiata is a company surfaced as a portfolio company of point-nine and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Finiata was a Berlin-founded fintech providing working-capital and invoice
+  financing to small businesses, freelancers and micro-enterprises, operating
+  principally in Germany and Poland and backed by investors including Point
+  Nine. It was surfaced as a portfolio company of point-nine and added to the
+  API Evangelist network as a lead for enrichment. As of the 2026-07-20
+  enrichment pass Finiata has no live public surface: finiata.com is
+  registered but fully undelegated (no NS, SOA, A, MX or TXT records) and does
+  not resolve; the former developer portal developer.finiata.com, archived as
+  live in 2019, no longer resolves; and finiata.de has been taken over by
+  unrelated third-party gambling-affiliate content. The only live first-party
+  assets found are the company's GitHub organization (github.com/debitech) and
+  one unmaintained internal npm tooling package. No API, OpenAPI or other
+  machine-readable specification, documentation, or well-known surface exists
+  to catalog.
 url: https://raw.githubusercontent.com/api-evangelist/finiata/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +36,37 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment-status: no-live-surface
+x-enrichment-checked: '2026-07-20'
+x-enrichment-note: >-
+  Re-probed 2026-07-20 and the 2026-07-19 finding is confirmed and extended.
+  finiata.com: no NS/SOA/A/MX/TXT records, HTTPS request returns no response
+  (curl 000); every subdomain is therefore dead, including the
+  developer.finiata.com portal that the Wayback Machine shows returning 200 in
+  2019. finiata.pl: no NS/SOA/A records. finiata.de: resolves via Cloudflare
+  and returns 200 but now serves unrelated third-party gambling-affiliate
+  content ("Chicken Road 2"), i.e. the domain has left Finiata's control.
+  probe-domain-security.py reported "unreachable" (no TLS/HSTS/DNSSEC/CAA/
+  SPF/DMARC data obtainable); probe-security-programs.py reported vdp=none
+  trust=none. New this pass: github.com/debitech was verified live (HTTP 200)
+  as Finiata's GitHub organization, holding 11 mostly-forked public repos
+  (coding challenges, a Creditsafe SOAP client fork, a landing page) with no
+  first-party API spec or client SDK; and npm carries one first-party package,
+  cz-finiata, a 2017 Commitizen release-tooling adapter published from
+  martin@finiata.com, captured in packages/. No OpenAPI, AsyncAPI, GraphQL,
+  webhook, well-known, security.txt, MCP, llms.txt, sandbox, changelog, CLI or
+  status-page surface exists, so no further artifact could be searched,
+  derived or probed without fabrication. Re-check on a future run.
 tags:
 - Company
+- Financial Services
+- Fintech
+- Lending
+- Invoice Financing
+- Working Capital
+- Small Business
+- Germany
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +76,15 @@ maintainers:
 common:
 - type: Website
   url: https://www.finiata.com
+  x-status: unresolvable (domain undelegated, verified 2026-07-20)
+- type: GitHubOrganization
+  name: Finiata on GitHub
+  url: https://github.com/debitech
+- type: Packages
+  name: Finiata packages
+  url: packages/finiata-packages.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1

@@ -1,0 +1,55 @@
+generated: '2026-07-20'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=finiata
+note: >-
+  Registry sweep of npm, PyPI, RubyGems, Packagist, Maven Central, NuGet,
+  pkg.go.dev and crates.io found no first-party Finiata API client library.
+  The single first-party package below is internal release tooling, not an
+  API SDK, so this artifact deliberately carries NO `SDKs` pointer in
+  apis.yml. Finiata's own API host (finiata.com) is undelegated and its
+  former developer portal (developer.finiata.com) no longer resolves, so
+  there is no API surface for a client library to target.
+registries_checked:
+  - registry: npm
+    query: finiata
+    result: one first-party package (cz-finiata), no API SDK
+  - registry: pypi
+    query: finiata
+    result: 404 no project
+  - registry: rubygems
+    query: finiata
+    result: no first-party package
+  - registry: packagist
+    query: finiata
+    result: no first-party package
+  - registry: maven-central
+    query: finiata
+    result: no first-party package
+  - registry: nuget
+    query: finiata
+    result: no first-party package
+  - registry: pkg.go.dev
+    query: finiata
+    result: no first-party package
+  - registry: crates.io
+    query: finiata
+    result: no first-party package
+packages:
+  - language: javascript
+    registry: npm
+    name: cz-finiata
+    url: https://www.npmjs.com/package/cz-finiata
+    install: npm install cz-finiata
+    official: true
+    official_evidence: >-
+      Published and maintained by martin@finiata.com (npm user martin-bb);
+      declared repository git+https://github.com/debitech/cz-finiata.git,
+      where github.com/debitech is Finiata's GitHub organization.
+    category: tooling
+    is_api_sdk: false
+    description: Commitizen adapter for finiata related releases
+    latest_version: 0.2.0
+    published: '2017-11-17'
+    repository: https://github.com/debitech/cz-finiata
+    repository_status: 404 (repository removed)
+    status: unmaintained
